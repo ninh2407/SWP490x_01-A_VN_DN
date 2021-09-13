@@ -24,11 +24,6 @@ Hệ thống bao gồm các thực thể
 
 - Entity 2: Biểu diễn một lần dò vé số của người dùng
 
-Công nghệ sử dụng
-- MVC với JSP/SERVLET
-
-- SpringBoot và SpringMVC
-
 Một số chức năng nâng cao khác 
 - Hỗ trợ đăng nhập bằng Facebook
 
@@ -38,4 +33,6 @@ Một số chức năng nâng cao khác
 # Công nghệ sử dụng
 Dự án áp dụng Bootstrap, JQuery vào thiết kế giao diện trang WEB, áp dụng kiến trúc MVC để xây dựng WEB thông qua công nghệ JSP/Servlet và thư viện Spring MVC. Database được thiết kế bằng SQL Server
 
+# Hướng dẫn sử dụng
+N/A
 
