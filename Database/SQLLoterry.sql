@@ -1,49 +1,53 @@
-CREATE DATABASE LotteryDB
+CREATE DATABASE lottery_database
 GO
 
-USE LotteryDB
+USE lottery_database
 GO
 
-CREATE TABLE Account
+CREATE TABLE account
 (
 	user_mail varchar(100) NOT NULL PRIMARY KEY,
 	password varchar(100) NOT NULL,
 	user_name nvarchar(50) NOT NULL,
-	user_phone varchar(10),
-	account_role int NOT NULL
+	user_phone varchar(10) NULL,
+	is_admin int NOT NULL
 )
 
-CREATE TABLE Company
+CREATE TABLE company
 (
-	company_id varchar(5) NOT NULL PRIMARY KEY,
+	id varchar(5) NOT NULL PRIMARY KEY,
 	name nvarchar(100) NOT NULL,
 	region varchar(5) NOT NULL
 )
 
-CREATE TABLE Lottery_result
+CREATE TABLE lottery_result
 (
-	company_id varchar(5) NOT NULL FOREIGN KEY REFERENCES Company(company_id),
-	date_open date NOT NULL,
-	sepcial varchar(6),
-	first varchar(6),
-	second varchar(6),
-	third varchar(15),
-	fourth varchar(60),
-	fifth varchar(10),
-	sixth varchar(30),
-	seventh varchar(20),
-	eighth varchar(20)
-	PRIMARY KEY (company_id, date_open)
+	company_id varchar(5) NOT NULL FOREIGN KEY REFERENCES company(id),
+	open_date date NOT NULL,
+	sepcial_prize varchar(6),
+	first_prize varchar(6),
+	second_prize varchar(15),
+	third_prize varchar(50),
+	fourth_prize varchar(50),
+	fifth_prize varchar(50),
+	sixth_prize varchar(30),
+	seventh_prize varchar(20),
+	eighth_prize varchar(2)
+	PRIMARY KEY (company_id, open_date)
 )
 
-CREATE TABLE Ticket 
+CREATE TABLE lottery_ticket 
 (
-	company_id varchar(5) NOT NULL,
-	date_open date NOT NULL,
+	company_id varchar(5) NOT NULL FOREIGN KEY REFERENCES company(id),
+	open_date date NOT NULL,
 	ticket_code varchar(6) NOT NULL,
-	user_mail varchar(100) NOT NULL,
-	PRIMARY KEY (company_id, date_open,ticket_code)
+	user_mail varchar(100) NOT NULL FOREIGN KEY REFERENCES account(user_mail),
+	PRIMARY KEY (company_id, open_date, ticket_code)
 )
+
+
+
+
 
 
 
