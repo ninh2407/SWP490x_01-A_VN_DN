@@ -25,15 +25,15 @@ CREATE TABLE lottery_result
 (
 	company_id varchar(5) NOT NULL FOREIGN KEY REFERENCES company(id),
 	open_date date NOT NULL,
-	special_prize varchar(6),
-	first_prize varchar(6),
-	second_prize varchar(15),
-	third_prize varchar(50),
-	fourth_prize varchar(50),
-	fifth_prize varchar(50),
-	sixth_prize varchar(30),
-	seventh_prize varchar(20),
-	eighth_prize varchar(2)
+	special_prize varchar(100),
+	first_prize varchar(100),
+	second_prize varchar(100),
+	third_prize varchar(100),
+	fourth_prize varchar(100),
+	fifth_prize varchar(100),
+	sixth_prize varchar(100),
+	seventh_prize varchar(100),
+	eighth_prize varchar(100)
 	PRIMARY KEY (company_id, open_date)
 )
 
