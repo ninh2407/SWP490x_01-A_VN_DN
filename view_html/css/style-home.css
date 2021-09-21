@@ -1,0 +1,152 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav-bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    padding: 0px;
+}
+
+.logo {
+    margin: 0px;
+}
+
+.nav-list {
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-list ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-list ul li {
+    padding: 0px 10px;
+}
+
+.nav-list ul li:hover {
+    background-color: azure;
+}
+/*main*/
+.adv {
+    width: 15%;
+    background-color: aquamarine;
+}
+
+.main {
+    width: 70%;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 30%;
+    background-color: rgb(0, 140, 255);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.menu a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border-bottom: 1px beige solid;
+}
+
+.menu a:hover {
+    background-color: #f16f04;
+}
+
+/*Result table*/
+
+.result-header {
+    justify-content: center;
+    background-color: #f7a059;
+    color: white;
+    align-items: center;
+    height: 60px;
+}
+
+.result-header h2 {
+    margin: 0px;
+}
+
+.box-result {
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+    rgba(0, 0, 0, 0.19);
+    margin: 25px;
+}
+
+.result {
+    width: 70%;
+    flex-direction: column;
+
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.result-title {
+    text-align: center;
+    background-color: #f7a059;
+	background: linear-gradient(135deg, #f7a059 0%, #f35587 100%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 10px;
+}
+
+.row-result {
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.result-number {
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 2px;
+}
+
+.prize {
+    text-align: center;
+    justify-content: center;
+    color: #f16f04;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.prize p {
+    margin: 0px;
+    justify-content: center;
+}
+
+.special {
+    color: red;
+    font-size: 26px;
+}
+
+
