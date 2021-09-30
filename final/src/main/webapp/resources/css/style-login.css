@@ -1,0 +1,150 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	padding: 20px 20px;
+	height: 800px;
+	position: relative;
+	margin: 0px;
+	background-color: #faf9f7;
+}
+
+.login {
+	width: 80%;
+	height: 420px;
+	position: absolute;
+	top: 120px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.items1 {
+	width: 50%;
+	height: 420px;
+	flex-direction: column;
+	padding: 20px 50px;
+	background-color: white;
+}
+
+.items1 label {
+	margin-bottom: 10px;
+}
+
+.items1 input {
+	margin-bottom: 20px;
+	background-color: rgb(229, 231, 231);
+	border-radius: 30px;
+	border: none;
+}
+
+.form-login {
+	width: 100%;
+}
+
+.items1 button {
+	background-color: #f7a059;
+	background: linear-gradient(135deg, #f7a059 0%, #f35587 100%);
+	width: 100%;
+	border: none;
+	color: white;
+	padding: 10px 32px;
+	margin: 20px 0px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 70px;
+}
+
+.items1 button:hover {
+	background: linear-gradient(135deg, #f78f3a 0%, #f32b6a 100%);
+}
+
+.arlet {
+	height: 20px;
+}
+
+.arlet p {
+	color: red;
+	margin: 0px;
+}
+
+.items2 {
+	width: 50%;
+	height: 420px;
+	flex-direction: column;
+	background-color: #f7a059;
+	background: linear-gradient(135deg, #f7a059 0%, #f35587 100%);
+}
+
+.items2 h4 {
+	margin-bottom: 30px;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+.items2 p {
+	margin-bottom: 20px;
+	color: white;
+}
+
+.items2 button {
+	background-color: #f7a059;
+	background: linear-gradient(135deg, #f7a059 0%, #f35587 100%);
+	border: 1px solid white;
+	color: white;
+	padding: 10px 32px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 70px;
+}
+
+.items2 button:hover {
+	color: black;
+	background-color: white;
+	background: linear-gradient(135deg, #fdfdfd 0%, #ffffff 100%);
+}
+
+.items2 a {
+	color: white;
+	margin-top: 20px;
+	text-decoration: none;
+}
+
+/*Show on ipad*/
+@media only screen and (max-width: 768px) {
+	.login {
+		width: 100%;
+		top: 150px;
+	}
+}
+
+/* Show on mobile*/
+@media only screen and (max-width: 576px) {
+	.login {
+		top: 0px; 
+		width: 100%;
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	
+	.items1 {
+		width: 100%;
+	}
+	.items2 {
+		width: 100%;
+	}
+}
