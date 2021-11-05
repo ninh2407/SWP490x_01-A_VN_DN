@@ -4,13 +4,14 @@ GO
 USE lottery_database
 GO
 
-CREATE TABLE account
+CREATE TABLE users
 (
-	user_mail varchar(100) NOT NULL PRIMARY KEY,
+	username varchar(100) PRIMARY KEY NOT NULL,
 	password varchar(100) NOT NULL,
-	user_name nvarchar(50) NOT NULL,
-	user_phone varchar(10) NULL,
-	is_admin int NOT NULL
+	name nvarchar(100) NOT NULL,
+	phone varchar(10) NOT NULL,
+	role varchar(20) NOT NULL,
+	enabled int NOT NULL
 )
 
 CREATE TABLE company
@@ -38,28 +39,16 @@ CREATE TABLE lottery_result
 	PRIMARY KEY (company_id, open_date)
 )
 
-CREATE TABLE lottery_ticket 
+  CREATE TABLE lottery_ticket 
 (
 	company_id varchar(5) NOT NULL FOREIGN KEY REFERENCES company(id),
 	open_date date NOT NULL,
 	ticket_code varchar(6) NOT NULL,
-	user_mail varchar(100) NOT NULL FOREIGN KEY REFERENCES account(user_mail),
+	user_mail varchar(100) NOT NULL FOREIGN KEY REFERENCES users(username),
+	result nvarchar(200),
 	PRIMARY KEY (company_id, open_date, ticket_code)
 )
 
-INSERT INTO [dbo].[account]
-           ([user_mail]
-           ,[password]
-           ,[user_name]
-           ,[user_phone]
-           ,[is_admin])
-     VALUES
-           ('ninh2407@gmail.com',
-			'aabb9087',
-			'ninh',
-			'0333833908',
-			1)
-GO
 
 INSERT INTO [dbo].[company]
            ([id]
@@ -154,5 +143,21 @@ INSERT INTO [dbo].[lottery_result]
 		   ('TV','2021-04-23', '203654','753159','98736', '57133 - 2204','28514 - 57303 - 16101 - 06189 - 77883 - 85412 - 54229','6654', '3078 - 4259 - 1064', '699', '89'),
 		   ('VL','2021-04-23', '666999','756951','25749', '00133 - 24023','28514 - 57258 - 16369 - 25899 - 78983 - 85013 - 54773','6654', '2209 - 1464 - 5491', '889', '98'),
 		   ('VT','2021-04-23', '786349','857534','36985', '10033 - 27472','78544 - 57425 - 16552 - 00101 - 75441 - 87783 - 57749','6654', '6379 - 9679 - 2502', '463', '35')
+GO
+
+INSERT INTO [dbo].[users]
+           ([username]
+           ,[password]
+           ,[name]
+           ,[phone]
+           ,[role]
+           ,[enabled])
+     VALUES
+           ('admin@gmail.com',
+		   '$2a$10$ld/2LWjIpz5h43tiiWMpG.tf7PXJVMoPmvMmvtXMjPoi8QCStnzya',
+		   'admin',
+		   '0333833999',
+		   'ROLE_ADMIN',
+		   1)
 GO
 
