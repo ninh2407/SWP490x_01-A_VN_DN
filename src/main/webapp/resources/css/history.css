@@ -1,0 +1,146 @@
+.history {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	margin: 20px;
+	box-shadow: 0 4px 8px 0 rgba(175, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.search-box-history {
+	width: 70%;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 40px;
+	box-shadow: 0 4px 8px 0 rgba(175, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+}
+
+.search-form {
+	padding: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.history-ticket {
+	width: 100%;
+	padding: 20px;
+}
+
+.history-ticket table {
+	width: 100%;
+}
+
+.history-ticket tr {
+	text-align: center;
+	vertical-align: middle;
+}
+
+.col1 {
+	width: 10%;
+}
+
+.col2 {
+	width: 20%;
+}
+
+.col3 {
+	width: 23%;
+}
+
+.col4 {
+	width: 17%;
+}
+
+.col5 {
+	width: 20%;
+}
+
+.col6 {
+	width: 10%;
+}
+
+input[type=checkbox] {
+	/* Double-sized Checkboxes */
+	-ms-transform: scale(2);
+	/* IE */
+	-moz-transform: scale(2);
+	/* FF */
+	-webkit-transform: scale(2);
+	/* Safari and Chrome */
+	-o-transform: scale(2);
+	/* Opera */
+	transform: scale(2);
+	padding: 10px;
+}
+
+/* Might want to wrap a span around your checkbox text */
+.checkboxtext {
+	/* Checkbox text */
+	font-size: 110%;
+	display: inline;
+}
+
+.history-header {
+	width: 100%;
+	padding-left: 20px;
+	justify-content: flex-start;
+}
+
+/*Show on ipad*/
+@media only screen and (max-width: 768px) {
+	.history-ticket table tr {
+		font-size: 10px;
+	}
+	.table, .table tbody, .table tr, .table td {
+		display: block;
+		width: 100%;
+	}
+	.table tr {
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	}
+	.table thead {
+		display: none;
+	}
+	td {
+		display: flex;
+		position: relative;
+		text-align: right;
+		padding-right: 10px !important;
+		border: 1px solid #ddd !important;
+		border-collapse: collapse;
+	}
+	.table input {
+		text-align: right;
+		padding-right: 10px;
+	}
+	td:before {
+		content: attr(data-label);
+		position: absolute;
+		left: 10px;
+		font-weight: 600;
+	}
+	.table-bordered>:not(caption)>* {
+		border-width: 0;
+	}
+	.search-box-history span {
+		font-size: 16px;
+	}
+	.search-box-history .form-control {
+		font-size: 16px;
+	}
+}
+
+/* Show on mobile*/
+@media only screen and (max-width: 576px) {
+	.search-box-history {
+		width: 100%;
+	}
+}
